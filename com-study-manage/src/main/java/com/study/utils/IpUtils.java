@@ -96,8 +96,10 @@ public class IpUtils {
         return null;
     }
 
-    public static void main(String[] args) {
-        // 测试本机IP
-        System.out.println(IpUtils.getCityInfo("175.11.203.1"));
-    }
+
+
+//    public static void main(String[] args) {
+//        // 测试本机IP
+//        System.out.println(IpUtils.getCityInfo("175.11.203.1"));
+//    }
 }
