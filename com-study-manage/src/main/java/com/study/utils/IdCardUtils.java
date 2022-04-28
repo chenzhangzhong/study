@@ -681,7 +681,7 @@ public class IdCardUtils {
      * @param idCard 身份证号码
      * @return 生肖
      */
-    public static String getZodiacById(String idCard) { // 根据身份证号，自动返回对应的生肖
+    public static String getZodiacById(String idCard) {
         if (!validateCard(idCard)) {
             return "";
         }
@@ -704,7 +704,7 @@ public class IdCardUtils {
      * @param idCard 身份证号码
      * @return 天干地支
      */
-    public static String getChineseEraById(String idCard) { // 根据身份证号，自动返回对应的生肖
+    public static String getChineseEraById(String idCard) {
         if (!validateCard(idCard)) {
             return "";
         }
@@ -723,35 +723,35 @@ public class IdCardUtils {
     }
 
 
-//    public static void main(String[] args) {
-//        //身份证号
-//        String idCard = "510103196502083435";
-//
-//        //验证身份证号码是否正确
-//        System.out.println(IdCardUtils.validateCard(idCard));
-//        //根据身份编号获取性别 性别(G-男，M-女，N-未知)
-//        System.out.println(IdCardUtils.getGenderByIdCard(idCard));
-//        //根据身份编号获取生日 生日(yyyyMMdd)
-//        String birthByIdCard = String.valueOf(IdCardUtils.getBirthByIdCard(idCard));
-//        System.out.println(birthByIdCard);
-//        StringBuffer stringBuffer = new StringBuffer(birthByIdCard);
-//        stringBuffer.insert(6, "-");
-//        stringBuffer.insert(4, "-");
-//        System.out.println(stringBuffer.toString());
-//
-//        String substring = birthByIdCard.substring(birthByIdCard.length() - 6);
-//        System.out.println(substring);
-//        //根据身份编号获取生日月 月(yy)
-//        System.out.println(IdCardUtils.getMonthByIdCard(idCard));
-//        //根据身份编号获取生日天 天（mm）
-//        System.out.println(IdCardUtils.getDateByIdCard(idCard));
-//        //根据身份证号，自动获取对应的星座
-//        System.out.println(IdCardUtils.getConstellationById(idCard));
-//        //根据身份证号，自动获取对应的生肖
-//        System.out.println(IdCardUtils.getZodiacById(idCard));
-//        //根据身份证号，自动获取对应的天干地支
-//        System.out.println(IdCardUtils.getChineseEraById(idCard));
-//        //根据身份编号获取户籍省份
-//        System.out.println(IdCardUtils.getProvinceByIdCard(idCard));
-//    }
+    public static void main(String[] args) {
+        //身份证号
+        String idCard = "510103196502083435";
+
+        //验证身份证号码是否正确
+        System.out.println(IdCardUtils.validateCard(idCard));
+        //根据身份编号获取性别 性别(G-男，M-女，N-未知)
+        System.out.println(IdCardUtils.getGenderByIdCard(idCard));
+        //根据身份编号获取生日 生日(yyyyMMdd)
+        String birthByIdCard = String.valueOf(IdCardUtils.getBirthByIdCard(idCard));
+        System.out.println(birthByIdCard);
+        StringBuffer stringBuffer = new StringBuffer(birthByIdCard);
+        stringBuffer.insert(6, "-");
+        stringBuffer.insert(4, "-");
+        System.out.println(stringBuffer.toString());
+
+        String substring = birthByIdCard.substring(birthByIdCard.length() - 6);
+        System.out.println(substring);
+        //根据身份编号获取生日月 月(yy)
+        System.out.println(IdCardUtils.getMonthByIdCard(idCard));
+        //根据身份编号获取生日天 天（mm）
+        System.out.println(IdCardUtils.getDateByIdCard(idCard));
+        //根据身份证号，自动获取对应的星座
+        System.out.println(IdCardUtils.getConstellationById(idCard));
+        //根据身份证号，自动获取对应的生肖
+        System.out.println(IdCardUtils.getZodiacById(idCard));
+        //根据身份证号，自动获取对应的天干地支
+        System.out.println(IdCardUtils.getChineseEraById(idCard));
+        //根据身份编号获取户籍省份
+        System.out.println(IdCardUtils.getProvinceByIdCard(idCard));
+    }
 }

@@ -6,6 +6,12 @@ import java.util.Random;
  * @author chenzhangzhong
  * @date 2021/11/22
  * @description 唯一码工具类
+ * 邀请码生成器，算法原理：<br/>
+ * (1) 获取id: 1127738 <br/>
+ * (2) 使用自定义进制转为：gpm6 <br/>
+ * (3) 转为字符串，并在后面加'o'字符：gpm6o <br/>
+ * (4）在后面随机产生若干个随机数字字符：gpm6o7 <br/>
+ * 转为自定义进制后就不会出现o这个字符，然后在后面加个'o'，这样就能确定唯一性。最后在后面产生一些随机字符进行补全。<br/>
  */
 public class UniqueCodeUtils {
     /**
